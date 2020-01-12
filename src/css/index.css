@@ -20,9 +20,12 @@ body {
 }
 
 #content {
-    width: 1000px;
     /* Set the top margin to a large value so the top-most content isn't covered by the navbar */
     margin-top: 75px;
+}
+
+#content, nav ul {
+    width: 1000px;
 }
 
 /* Navbar */
@@ -39,10 +42,10 @@ nav {
 
 nav ul {
     /* Set the nav items to the right side of the screen */
-    float: right;
+    justify-content: flex-end;
     list-style-type: none;
     padding: 0px;
-    margin: 0px 20px 0px 0px;
+    margin: 0px;
 }
 
 nav ul li {
@@ -52,8 +55,9 @@ nav ul li {
 }
 
 nav ul li:last-child {
-    /* Remove redundant border */
+    /* Remove redundant values */
     border-right: none;
+    padding-right: 0px;
 }
 
 nav ul li.nav-active, nav ul li:hover {
