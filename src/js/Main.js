@@ -3,7 +3,8 @@ class Main {
     static projects = [
         "falling-lights",
         "geometric-constellations",
-        "rainbow-black-hole"
+        "rainbow-black-hole",
+        "cubic-audio-visualizer"
     ];
 
     static initialize() {
