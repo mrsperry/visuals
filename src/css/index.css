@@ -1,0 +1,157 @@
+/* Import Dosis */
+@font-face {
+    font-family: "Dosis";
+    src: url("/visuals/fonts/Dosis-Regular.otf");
+}
+
+* {
+    font-family: "Dosis", monospace;
+}
+
+/* Containers */
+body {
+    margin: 0px;
+    background-color: #111111;
+    color: #CCCCCC;
+}
+
+#container {
+    width: 100%;
+}
+
+#content {
+    width: 1000px;
+    /* Set the top margin to a large value so the top-most content isn't covered by the navbar */
+    margin-top: 75px;
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    font-size: 16pt;
+    z-index: 1;
+    background-color: #111111;
+    box-shadow: 0px 3px 10px #000000;
+    top: 0px;
+    width: 100%;
+    padding: 15px 0px;
+}
+
+nav ul {
+    /* Set the nav items to the right side of the screen */
+    float: right;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px 20px 0px 0px;
+}
+
+nav ul li {
+    color: #AAAAAA;
+    border-right: 1px solid #333333;
+    padding: 0px 15px;
+}
+
+nav ul li:last-child {
+    /* Remove redundant border */
+    border-right: none;
+}
+
+nav ul li.nav-active, nav ul li:hover {
+    color: #EEEEEE;
+}
+
+nav ul li:hover {
+    cursor: pointer;
+}
+
+nav ul li.nav-active:hover {
+    /* Active nav items shouldn't have a pointer cursor */
+    cursor: default;
+}
+
+/* Carousel */
+#carousel, .project {
+    box-shadow: 0px 5px 10px #000000;
+    transition: box-shadow 300ms;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 500px;
+}
+
+/* Project list */
+#project-list {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.project {
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    background-color: #000000;
+    width: 300px;
+    height: 250px;
+    margin: 15px;
+}
+
+.project:hover {
+    /* Create a lighter shadow all around the project container */
+    box-shadow: 0px 5px 10px #222222, 0px -5px 10px #222222, 5px 0px 10px #222222, -5px 0px 10px #222222;
+}
+
+.project, .project img {
+    border-radius: 20px;
+}
+
+.project a {
+    width: 100%;
+    height: 100%;
+}
+
+.project img {
+    width: 300px;
+    height: 250px;
+}
+
+/* Special case images that don't behave well with automatic aspect ratios */
+#rainbow-black-hole {
+    max-width: 300px;
+    max-height: 250px;
+    height: auto;
+    width: auto;
+}
+
+.project .title {
+    position: absolute;
+    color: #CCCCCC;
+    text-align: center;
+    bottom: 15px;
+    width: 100%;
+}
+
+/* Disclaimer */
+#disclaimer {
+    padding-top: 50px;
+    border-top: 1px solid #333333;
+    margin: 50px 0px;
+}
+
+/* Global styles */
+.flex {
+    display: flex;
+}
+
+.flex-justify-center {
+    justify-content: center;
+}
+
+.flex-align-center {
+    align-items: center;
+}
+
+.bold {
+    font-weight: bold;
+}

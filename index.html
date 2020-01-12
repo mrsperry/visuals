@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>Visual Projects - Joshua Sperry</title>
+
+        <!-- jQuery -->
+        <script src="libraries/jquery-3.4.1.min.js"></script>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" type="text/css" href="libraries/bootstrap/bootstrap.min.css">
+        <script src="libraries/bootstrap/bootstrap.min.js"></script>
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="src/css/index.css">
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav>
+            <ul class="flex">
+                <li><a>Home</a></li>
+                <li><a>Games</a></li>
+                <li class="nav-active"><a>Visuals</a></li>
+            </ul>
+        </nav>
+        <!-- Containers -->
+        <div id="container" class="flex flex-justify-center">
+            <div id="content">
+                <!-- Carousel -->
+                <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="7000">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel" data-slide-to="1"></li>
+                        <li data-target="#carousel" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href="projects/falling-lights">
+                                <img class="carousel-image d-block w-100" src="src/images/falling-lights.png" alt="Falling Lights">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Falling Lights</h5>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="projects/geometric-constellations">
+                                <img class="carousel-image d-block w-100" src="src/images/geometric-constellations.png" alt="Geometric Constellations">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Geometric Constellations</h5>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="projects/rainbow-black-hole">
+                                <img class="carousel-image d-block w-100" src="src/images/rainbow-black-hole.png" alt="Rainbow Black Hole">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Rainbow Black Hole</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <!-- Project list (filled in via JS) -->
+                <div id="project-list" class="flex"></div>
+                <!-- Disclaimer-->
+                <div id="disclaimer">
+                    <p>Some project ideas are not my own and I don't claim that they are. I created or remade all of these projects to further my skills and for fun.</p>
+                    <p>If I have remade one of your creations and you'd like me to remove it, email me at <span class="bold">mrjoshuasperry@gmail.com</span>.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Scripts -->
+        <script src="src/js/Main.js"></script>
+        <script>Main.initialize();</script>
+    </body>
+</html>
