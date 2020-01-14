@@ -1,16 +1,18 @@
 class light {
-    // Radius of the lights
-    static lightRadius = 3;
-    // Lowest max speed of a light
-    static minLightSpeed = 0.015;
-    // Highest max speed of a light
-    static maxLightSpeed = 0.02;
-    // The acceleration speed of all lights until they hit their max speed
-    static acceleration = 0.001;
-    // How far in the lights should spawn in comparison to the hole radius
-    static animationSpawnRadius = 5;
-    // How fast the spawn animation should play
-    static animationSpeed = 0.1;
+    static globals() {
+        // Radius of the lights
+        light.lightRadius = 3;
+        // Lowest max speed of a light
+        light.minLightSpeed = 0.015;
+        // Highest max speed of a light
+        light.maxLightSpeed = 0.02;
+        // The acceleration speed of all lights until they hit their max speed
+        light.acceleration = 0.001;
+        // How far in the lights should spawn in comparison to the hole radius
+        light.animationSpawnRadius = 5;
+        // How fast the spawn animation should play
+        light.animationSpeed = 0.1;
+    }
 
     // If the spawn animation has been completed
     animationComplete = false;

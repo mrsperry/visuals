@@ -1,13 +1,13 @@
 class Main {
-    // List of all visual project names
-    static projects = [
-        "falling-lights",
-        "geometric-constellations",
-        "rainbow-black-hole",
-        "cubic-audio-visualizer"
-    ];
-
     static initialize() {
+        // List of all visual project names
+        Main.projects = [
+            "falling-lights",
+            "geometric-constellations",
+            "rainbow-black-hole",
+            "cubic-audio-visualizer"
+        ];
+
         for (const name of Main.projects) {
             // Create the image container
             const container = $("<div>")

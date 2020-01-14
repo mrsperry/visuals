@@ -1,18 +1,20 @@
 class star {
-    // How far a star can connect to another star in pixels
-    static connectorRadius = 100;
-    // The minimum size of a star
-    static minSize = 4;
-    // The maximum size of a star
-    static maxSize = 10;
-    // The minimum grayscale value of a star
-    static minColor = 130;
-    // The maximum grayscale value of a star
-    static maxColor = 200;
-    // The minimum speed of a star, measured in frames
-    static minSpeed = 0.0001;
-    // The maximum speed of a star measured in frames
-    static maxSpeed = 0.0005;
+    static globals() {
+        // How far a star can connect to another star in pixels
+        star.connectorRadius = 100;
+        // The minimum size of a star
+        star.minSize = 4;
+        // The maximum size of a star
+        star.maxSize = 10;
+        // The minimum grayscale value of a star
+        star.minColor = 130;
+        // The maximum grayscale value of a star
+        star.maxColor = 200;
+        // The minimum speed of a star, measured in frames
+        star.minSpeed = 0.0001;
+        // The maximum speed of a star measured in frames
+        star.maxSpeed = 0.0005;
+    }
 
     size = round(random(star.minSize, star.maxSize));
     color = round(random(star.minColor, star.maxColor));

@@ -1,32 +1,34 @@
 class sequence {
-    // All sequence colors, in order
-    static colorSequence = [
-        // Red - Orange - Yellow
-        [255, 0, 0], [255, 128, 0], [255, 255, 0],
-        // Lime Green - Green - Aquamarine
-        [128, 255, 0], [0, 255, 0], [0, 255, 128],
-        // Teal - Light Blue - Blue
-        [0, 255, 255], [0, 128, 255], [0, 0, 255],
-        // Violet - Purple - Magenta
-        [128, 0, 255], [255, 0, 255], [255, 0, 128]
-    ];
-    // The color to be displayed in the center of the screen
-    static index = 0;
-    // The previous color displayed in the center (used for transitions)
-    static previousIndex = sequence.index;
-    // If a color transition is currently happening
-    static transition = false;
-    // Current percentage (0-1) of the transition
-    static transitionPercent = 0;
-    // Speed at which transitions between colors should occur
-    static transitionSpeed = 0.001;
-    // Frame interval when a new color is selected if a transition is not in progress
-    static sequenceInterval = 500;
+    static globals() {
+        // All sequence colors, in order
+        sequence.colorSequence = [
+            // Red - Orange - Yellow
+            [255, 0, 0], [255, 128, 0], [255, 255, 0],
+            // Lime Green - Green - Aquamarine
+            [128, 255, 0], [0, 255, 0], [0, 255, 128],
+            // Teal - Light Blue - Blue
+            [0, 255, 255], [0, 128, 255], [0, 0, 255],
+            // Violet - Purple - Magenta
+            [128, 0, 255], [255, 0, 255], [255, 0, 128]
+        ];
+        // The color to be displayed in the center of the screen
+        sequence.index = 0;
+        // The previous color displayed in the center (used for transitions)
+        sequence.previousIndex = sequence.index;
+        // If a color transition is currently happening
+        sequence.transition = false;
+        // Current percentage (0-1) of the transition
+        sequence.transitionPercent = 0;
+        // Speed at which transitions between colors should occur
+        sequence.transitionSpeed = 0.001;
+        // Frame interval when a new color is selected if a transition is not in progress
+        sequence.sequenceInterval = 500;
 
-    // Selected colors
-    static colors = [];
-    // Previously selected colors
-    static previousColors = [];
+        // Selected colors
+        sequence.colors = [];
+        // Previously selected colors
+        sequence.previousColors = [];
+    }
 
     static update() {
         // Check if a current transition is complete

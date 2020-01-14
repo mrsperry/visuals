@@ -1,21 +1,23 @@
 class sequence {
-    // All sequence colors, in order
-    static colorSequence = [
-        // Red - Orange - Yellow
-        [255, 0, 0], [255, 128, 0], [255, 255, 0],
-        // Lime Green - Green - Aquamarine
-        [128, 255, 0], [0, 255, 0], [0, 255, 128],
-        // Teal - Light Blue - Blue
-        [0, 255, 255], [0, 128, 255], [0, 0, 255],
-        // Violet - Purple - Magenta
-        [128, 0, 255], [255, 0, 255], [255, 0, 128]
-    ];
-    // The current index of the sequence
-    static colorIndex = 0;
-    // The progress of the current transition (0-1)
-    static colorProgress = 0;
-    // How much progress should be added each frame
-    static transitionSpeed = 0.1;
+    static globals() {
+        // All sequence colors, in order
+        sequence.colorSequence = [
+            // Red - Orange - Yellow
+            [255, 0, 0], [255, 128, 0], [255, 255, 0],
+            // Lime Green - Green - Aquamarine
+            [128, 255, 0], [0, 255, 0], [0, 255, 128],
+            // Teal - Light Blue - Blue
+            [0, 255, 255], [0, 128, 255], [0, 0, 255],
+            // Violet - Purple - Magenta
+            [128, 0, 255], [255, 0, 255], [255, 0, 128]
+        ];
+        // The current index of the sequence
+        sequence.colorIndex = 0;
+        // The progress of the current transition (0-1)
+        sequence.colorProgress = 0;
+        // How much progress should be added each frame
+        sequence.transitionSpeed = 0.1;
+    }
 
     static update() {
         sequence.colorProgress += sequence.transitionSpeed;

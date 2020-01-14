@@ -7,16 +7,22 @@ function draw() {
 }
 
 class main {
-    // The maximum number of stars allowed on screen at once
-    static maxStars = 100;
-    // The cooldown timer to add new stars, preventing stalls in new spawns
-    static spawnCooldown = 5;
+    static globals() {
+        // The maximum number of stars allowed on screen at once
+        main.maxStars = 100;
+        // The cooldown timer to add new stars, preventing stalls in new spawns
+        main.spawnCooldown = 5;
 
-    // The current stars
-    static stars = [];
+        // The current stars
+        main.stars = [];
+    }
 
     static setup() {
         createCanvas(window.innerWidth, window.innerHeight);
+
+        // Set globals
+        main.globals();
+        star.globals();
     }
 
     static draw() {

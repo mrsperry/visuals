@@ -7,19 +7,9 @@ function draw() {
 }
 
 class main {
-    // How many lights can be added each frame
-    static maxLightsPerFrame = 10;
-
-    // Current lights
-    static lights = [];
-    // Center of the screen
-    static center;
-    // Radius of the hole
-    static radius;
-
-    static setup() {
-        createCanvas(window.innerWidth, window.innerHeight);
-        noStroke();
+    static globals() {
+        // How many lights can be added each frame
+        main.maxLightsPerFrame = 10;
 
         // Set the center of the screen
         main.center = {
@@ -28,6 +18,19 @@ class main {
         };
         // Set one third of the lower between width and height as the radius of the hole
         main.radius = round((window.innerWidth > window.innerHeight ? window.innerHeight : window.innerWidth) / 3);
+
+        // Current lights
+        main.lights = [];
+    }
+
+    static setup() {
+        createCanvas(window.innerWidth, window.innerHeight);
+        noStroke();
+
+        // Set globals
+        main.globals();
+        light.globals();
+        sequence.globals();
     }
 
     static draw() {

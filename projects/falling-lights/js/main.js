@@ -7,13 +7,15 @@ function draw() {
 }
 
 class main {
-    // Maximum number of lights drawn at once
-    static maxLights = 600;
+    static globals() {
+        // Maximum number of lights drawn at once
+        main.maxLights = 600;
 
-    // Array of all lights being drawn
-    static lights = [];
-    // Array of spaces taken
-    static taken = [];
+        // Array of all lights being drawn
+        main.lights = [];
+        // Array of spaces taken
+        main.taken = [];
+    }
 
     static setup() {
         // Create the canvas
@@ -21,6 +23,11 @@ class main {
 
         // Set the background to black
         background(0);
+
+        // Set globals
+        main.globals();
+        light.globals();
+        sequence.globals();
 
         // Set the inital colors of the sequence
         sequence.setColors();

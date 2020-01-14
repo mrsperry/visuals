@@ -7,12 +7,15 @@ function draw() {
 }
 
 class main {
-    // The refresh rate of the visualizer measured in frames (higher is slower)
-    static refreshRate = 7;
-
-    // The current cubes
-    static cubes = [];
-
+    static globals() {
+        // Set the center of the x axis
+        main.center = round(window.innerWidth / 2);
+        // The refresh rate of the visualizer measured in frames (higher is slower)
+        main.refreshRate = 7;
+        // The current cubes
+        main.cubes = [];
+    }
+    
     static setup() {
         // Create the canvas
         createCanvas(window.innerWidth, window.innerHeight);
@@ -21,10 +24,9 @@ class main {
         background(0);
         noStroke();
 
-        // Set the center of the x axis
-        main.center = round(window.innerWidth / 2);
-        // Set the max number of levels any cube can have at once based on window height
-        cube.maxLevels = floor(((window.innerHeight / 2) + (cube.cubeDimensions / 2)) / cube.cubeSize);
+        // Set globals
+        main.globals();
+        cube.globals();
 
         // Get the total number of cubes that can fit on the screen
         const count = floor(window.innerWidth / cube.cubeSize);

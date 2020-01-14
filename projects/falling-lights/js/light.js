@@ -1,14 +1,16 @@
 class light {
-    // Chance to create a tipped light (0-1)
-    static tippedChance = 0.1;
-    // Minimum speed the light must be going to be tipped
-    static minimumTipSpeed = 0.7;
-    // Minimum tip length in pixels
-    static minTipLength = 50;
-    // Maximum tip length in pixels
-    static maxTipLength = 15;
-    // Maximum color offset (0-255)
-    static maxColorOffset = 35;
+    static globals() {
+        // Chance to create a tipped light (0-1)
+        light.tippedChance = 0.1;
+        // Minimum speed the light must be going to be tipped
+        light.minimumTipSpeed = 0.7;
+        // Minimum tip length in pixels
+        light.minTipLength = 50;
+        // Maximum tip length in pixels
+        light.maxTipLength = 15;
+        // Maximum color offset (0-255)
+        light.maxColorOffset = 35;
+    }
 
     constructor(position) {
         // Set a random position along the top of the screen

@@ -1,22 +1,26 @@
 class cube {
-    // Dimensions of each cube in pixels
-    static cubeDimensions = 15;
-    // How many pixels are placed between each cube
-    static cubeSpacing = 3;
-    // Total width of each cube
-    static cubeSize = cube.cubeDimensions + cube.cubeSpacing;
-    // The multiplier used when determining levels
-    static levelMultiplier = 15;
-    // The multiplier used when determining tip color
-    static tipMultipiler = 2;
-    // The minimum number of cubes to be generated below the maximum
-    static minLevels = 7;
-    // The outer color of the visualizer
-    static innerColor = [255, 0, 0];
-    // The inner color of the visualizer
-    static outerColor = [0, 0, 255];
-    // The tip color of the visualizer
-    static tipColor = [255, 255, 0];
+    static globals() {
+        // Set the max number of levels any cube can have at once based on window height
+        cube.maxLevels = floor(((window.innerHeight / 2) + (cube.cubeDimensions / 2)) / cube.cubeSize);
+        // Dimensions of each cube in pixels
+        cube.cubeDimensions = 15;
+        // How many pixels are placed between each cube
+        cube.cubeSpacing = 3;
+        // Total width of each cube
+        cube.cubeSize = cube.cubeDimensions + cube.cubeSpacing;
+        // The multiplier used when determining levels
+        cube.levelMultiplier = 15;
+        // The multiplier used when determining tip color
+        cube.tipMultipiler = 2;
+        // The minimum number of cubes to be generated below the maximum
+        cube.minLevels = 7;
+        // The outer color of the visualizer
+        cube.innerColor = [255, 0, 0];
+        // The inner color of the visualizer
+        cube.outerColor = [0, 0, 255];
+        // The tip color of the visualizer
+        cube.tipColor = [255, 255, 0];
+    }
 
     constructor(position) {
         this.position = position;
