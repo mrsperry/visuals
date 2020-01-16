@@ -6,7 +6,8 @@ class Main {
             "geometric-constellations",
             "rainbow-black-hole",
             "cubic-audio-visualizer",
-            "falling-text"
+            "falling-text",
+            "reaching-arms"
         ];
 
         for (const name of Main.projects) {
