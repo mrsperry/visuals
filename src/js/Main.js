@@ -5,7 +5,8 @@ class Main {
             "falling-lights",
             "geometric-constellations",
             "rainbow-black-hole",
-            "cubic-audio-visualizer"
+            "cubic-audio-visualizer",
+            "falling-text"
         ];
 
         for (const name of Main.projects) {
