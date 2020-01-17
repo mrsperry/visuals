@@ -7,7 +7,8 @@ class Main {
             "rainbow-black-hole",
             "cubic-audio-visualizer",
             "falling-text",
-            "reaching-arms"
+            "reaching-arms",
+            "raindrops"
         ];
 
         for (const name of Main.projects) {
