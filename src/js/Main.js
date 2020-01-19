@@ -8,7 +8,8 @@ class Main {
             "cubic-audio-visualizer",
             "falling-text",
             "reaching-arms",
-            "raindrops"
+            "raindrops",
+            "futuristic-audio-visualizer"
         ];
 
         for (const name of Main.projects) {
