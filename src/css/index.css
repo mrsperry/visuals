@@ -1,103 +1,69 @@
-/* Import Dosis */
 @font-face {
-    font-family: "Dosis";
-    src: url("/visuals/fonts/Dosis-Regular.otf");
+    font-family: "Klein";
+    src: url("../../fonts/klein-regular.ttf")
 }
 
-* {
-    font-family: "Dosis", monospace;
+:root, body {
+    font-family: "Klein";
+    font-size: 16px;
+    color: #000000;
+    line-height: inherit;
 }
 
-/* Containers */
-body {
-    margin: 0px;
-    background-color: #111111;
-    color: #CCCCCC;
-}
-
-#container {
-    width: 100%;
-}
-
-#content {
-    /* Set the top margin to a large value so the top-most content isn't covered by the navbar */
-    margin-top: 75px;
-}
-
-#content, nav ul {
-    width: 1000px;
+#content, #nav-navbar {
+    width: 63em;
 }
 
 /* Navbar */
-nav {
-    position: fixed;
-    font-size: 16pt;
-    z-index: 1;
-    background-color: #111111;
-    box-shadow: 0px 3px 10px #000000;
-    top: 0px;
+#nav {
+    background-color: #FFFFFF;
+    box-shadow: 0em 0.2em 0.4em #CCCCCC;
     width: 100%;
-    padding: 15px 0px;
+    height: 3em;
 }
 
-nav ul {
-    /* Set the nav items to the right side of the screen */
+#nav-navbar {
     justify-content: flex-end;
-    list-style-type: none;
-    padding: 0px;
-    margin: 0px;
 }
 
-nav ul li {
-    border-right: 1px solid #333333;
-    padding: 0px 15px;
+.nav-item, .nav-item:visited {
+    color: #000000;
+    /* Overwrite bootstrap CSS */
+    text-decoration: none !important;
+    box-sizing: border-box;
+    padding: 0em 0.2em;
+    margin: 0em 0.8em;
 }
 
-nav ul li a {
-    color: #AAAAAA;
+.nav-item:hover, .nav-active {
+    margin-bottom: -2px;
+    border-bottom: 2px solid #333333;
 }
 
-nav ul li:last-child {
-    /* Remove redundant values */
+.nav-item:last-child {
     border-right: none;
-    padding-right: 0px;
 }
 
-nav ul li.nav-active a {
-    padding-bottom: 5px;
-    border-bottom: 2px solid #EEEEEE;
-}
-
-nav ul li.nav-active, nav ul li:hover, nav ul li:hover a {
-    color: #EEEEEE;
-}
-
-nav ul li:hover a {
-    cursor: pointer;
-    text-decoration: none;
-}
-
-nav ul li.nav-active:hover a {
-    /* Active nav items shouldn't have a pointer cursor */
+.nav-active {
     cursor: default;
 }
 
 /* Carousel */
 #carousel, .project {
-    box-shadow: 0px 5px 10px #000000;
+    box-shadow: 0em 0.3em 0.5em #000000;
     transition: box-shadow 300ms;
 }
 
 .carousel-image {
     width: 100%;
-    height: 500px;
+    height: 31em;
 }
 
 /* Project list */
 #project-list {
     justify-content: space-around;
     flex-wrap: wrap;
-    margin-top: 50px;
+    margin-top: 3em;
 }
 
 .project {
@@ -105,18 +71,23 @@ nav ul li.nav-active:hover a {
     text-align: center;
     cursor: pointer;
     background-color: #000000;
-    width: 300px;
-    height: 250px;
-    margin: 15px;
-}
-
-.project:hover {
-    /* Create a lighter shadow all around the project container */
-    box-shadow: 0px 5px 10px #222222, 0px -5px 10px #222222, 5px 0px 10px #222222, -5px 0px 10px #222222;
+    margin: 1em;
 }
 
 .project, .project img {
-    border-radius: 20px;
+    width: 18.5em;
+    height: 15.5em;
+}
+
+.project:hover {
+    box-shadow: 0em 0.2em 0.5em #87C4E7, 
+        0em -0.2em 0.5em #87C4E7, 
+        0.2em 0em 0.5em #87C4E7, 
+        -0.2em 0em 0.5em #87C4E7;
+}
+
+.project, .project img {
+    border-radius: 1.4em;
 }
 
 .project a {
@@ -124,15 +95,10 @@ nav ul li.nav-active:hover a {
     height: 100%;
 }
 
-.project img {
-    width: 300px;
-    height: 250px;
-}
-
 /* Special case images that don't behave well with automatic aspect ratios */
 #rainbow-black-hole {
-    max-width: 300px;
-    max-height: 250px;
+    max-width: 18.5em;
+    max-height: 15.5em;
     height: auto;
     width: auto;
 }
@@ -141,7 +107,7 @@ nav ul li.nav-active:hover a {
     position: absolute;
     color: #CCCCCC;
     text-align: center;
-    bottom: 15px;
+    bottom: 1em;
     width: 100%;
 }
 
