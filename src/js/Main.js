@@ -9,7 +9,8 @@ class Main {
             "falling-text",
             "reaching-arms",
             "raindrops",
-            "futuristic-audio-visualizer"
+            "futuristic-audio-visualizer",
+            "rotating-spiral"
         ];
 
         for (const name of Main.projects) {
