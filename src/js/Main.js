@@ -50,7 +50,7 @@ class Main {
     static idToText(id) {
         let result = "";
         for (const word of id.split("-")) {
-            // Capatalize the word and add a space
+            // Capitalize the word and add a space
             result += word[0].toUpperCase() + word.substring(1, word.length) + " ";
         }
 
