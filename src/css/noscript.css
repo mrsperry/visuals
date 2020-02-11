@@ -1,0 +1,16 @@
+#content {
+    display: none;
+}
+
+#nav {
+    margin-bottom: 2em;
+}
+
+noscript > p {
+    text-align: center;
+}
+
+a:hover {
+    text-decoration: none;
+    color: hsl(210, 100%, 70%);
+}

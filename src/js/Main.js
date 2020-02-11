@@ -13,7 +13,7 @@ class Main {
             "rotating-spiral"
         ];
 
-        for (const name of Main.projects) {
+        for (const id of Main.projects) {
             // Create the image container
             const container = $("<div>")
                 .addClass("project")
@@ -22,19 +22,22 @@ class Main {
             // Make sure the entire container can be clicked on
             const link = $("<a>")
                 .addClass("flex flex-justify-center flex-align-center")
-                .attr("href", "projects/" + name)
+                .attr("href", "projects/" + id)
                 .appendTo(container);
+
+            const titleString = Main.idToText(id);
 
             // Set the image
             $("<img>")
-                .attr("id", name)
-                .attr("src", "src/images/" + name + ".png")
+                .attr("id", id)
+                .attr("src", "src/images/" + id + ".png")
+                .attr("alt", titleString)
                 .appendTo(link);
 
             // Set the title
             const title = $("<div>")
                 .addClass("title bold centered")
-                .text(Main.idToText(name))
+                .text(titleString)
                 .hide()
                 .appendTo(link);
 
