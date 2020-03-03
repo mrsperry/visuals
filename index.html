@@ -2,8 +2,12 @@
 <html lang="en">
     <head>
         <title>Visual Projects - Joshua Sperry</title>
+        <!-- Meta-->
+        <meta name="charset" content="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="A collection of visual projects created using the framework p5js. Created by Joshua Sperry">
+        <meta name="author" content="Joshua Sperry">
+        <meta name="description" content="A collection of visual projects created using the framework p5js">
+        <meta name="keywords" content="Joshua Sperry, portfolio, websites, personal projects, p5, visual, creative coding">
         <!-- jQuery -->
         <script src="libraries/jquery-3.4.1.min.js"></script>
         <!-- Bootstrap -->
@@ -11,6 +15,7 @@
         <script src="libraries/bootstrap/bootstrap.min.js"></script>
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="src/css/index.css">
+        <link rel="stylesheet" type="text/css" href="src/css/media.css">
         <noscript>
             <link rel="stylesheet" type="text/css" href="src/css/noscript.css">
         </noscript>
@@ -27,73 +32,69 @@
     <body>
         <!-- Navbar -->
         <nav id="nav" class="flex flex-justify-center">
-            <div id="nav-navbar" class="flex flex-align-center">
-                <a class="nav-item" href="../">Home</a>
-                <a class="nav-item" href="../games">Games</a>
-                <a class="nav-item" href="../websites">Websites</a>
-                <a class="nav-item nav-active">Visuals</a>
+            <div id="nav-navbar" class="flex">
+                <a href="../">About Me</a>
+                <a href="../portfolio">Portfolio</a>
+                <a href="../games">Games</a>
+                <a class="nav-active">Visuals</a>
             </div>
         </nav>
         <noscript>
             <p class="centered">You must enable Javascript to view this page and individual visual projects.</p>
             <p class="centered">If you are concerned about the content of the scripts, you may <a href="https://github.com/mrsperry/visuals/" target="_blank">view the source code on Github</a>.</p>
         </noscript>
-        <!-- Containers -->
-        <div id="container" class="flex flex-justify-center">
-            <div id="content">
-                <!-- Carousel -->
-                <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="7000">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel" data-slide-to="1"></li>
-                        <li data-target="#carousel" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <a href="projects/falling-lights">
-                                <img class="carousel-image d-block w-100" src="src/images/carousel-1.jpg" alt="Falling Lights">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>Falling Lights</h5>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="carousel-item">
-                            <a href="projects/cubic-audio-visualizer">
-                                <img class="carousel-image d-block w-100" src="src/images/carousel-2.jpg" alt="Cubic Audio Visualizer">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>Cubic Audio Visualizer</h5>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="carousel-item">
-                            <a href="projects/falling-text">
-                                <img class="carousel-image d-block w-100" src="src/images/carousel-3.jpg" alt="Falling Text">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>Falling Text</h5>
-                                </div>
-                            </a>
-                        </div>
+        <main id="content">
+            <!-- Carousel -->
+            <section id="carousel" class="carousel slide" data-ride="carousel" data-interval="7000">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel" data-slide-to="1"></li>
+                    <li data-target="#carousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="projects/falling-lights">
+                            <img class="carousel-image d-block w-100" src="src/images/carousel-1.jpg" alt="Falling Lights">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Falling Lights</h5>
+                            </div>
+                        </a>
                     </div>
-                    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+                    <div class="carousel-item">
+                        <a href="projects/cubic-audio-visualizer">
+                            <img class="carousel-image d-block w-100" src="src/images/carousel-2.jpg" alt="Cubic Audio Visualizer">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Cubic Audio Visualizer</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="projects/falling-text">
+                            <img class="carousel-image d-block w-100" src="src/images/carousel-3.jpg" alt="Falling Text">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Falling Text</h5>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <!-- Project list (filled in via JS) -->
-                <div id="project-list" class="flex"></div>
-                <!-- Disclaimer-->
-                <div id="disclaimer">
-                    <p>Some project ideas are not my own and I don't claim that they are. I created or remade all of these projects to further my skills and for fun.</p>
-                    <p>If I have remade one of your creations and you'd like me to remove it, email me at <span class="bold">mrjoshuasperry@gmail.com</span>.</p>
-                </div>
-            </div>
-        </div>
+                <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </section>
+            <!-- Project list (filled in via JS) -->
+            <section id="project-list" class="flex"></section>
+            <!-- Disclaimer-->
+            <footer id="disclaimer">
+                <p>Some project ideas are not my own and I don't claim that they are. I created or remade all of these projects to further my skills and for fun.</p>
+                <p>If I have remade one of your creations and you'd like me to remove it, email me at <span class="bold">mrjoshuasperry@gmail.com</span>.</p>
+            </footer>
+        </main>
         <!-- Scripts -->
         <script src="src/js/Main.js"></script>
-        <script>Main.initialize();</script>
     </body>
 </html>

@@ -35,7 +35,7 @@ class Main {
                 .appendTo(link);
 
             // Set the title
-            const title = $("<div>")
+            const title = $("<header>")
                 .addClass("title bold centered")
                 .text(titleString)
                 .hide()
@@ -61,3 +61,7 @@ class Main {
         return result.substring(0, result.length - 1);
     }
 }
+
+(() => {
+    Main.initialize();
+})();
