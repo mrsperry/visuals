@@ -10,7 +10,8 @@ class Main {
             "reaching-arms",
             "raindrops",
             "futuristic-audio-visualizer",
-            "rotating-spiral"
+            "rotating-spiral",
+            "random-walkers"
         ];
 
         for (const id of Main.projects) {
