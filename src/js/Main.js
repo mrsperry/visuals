@@ -11,7 +11,8 @@ class Main {
             "raindrops",
             "futuristic-audio-visualizer",
             "rotating-spiral",
-            "random-walkers"
+            "random-walkers",
+            "abstract-squares"
         ];
 
         for (const id of Main.projects) {
