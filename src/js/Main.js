@@ -12,7 +12,8 @@ class Main {
             "futuristic-audio-visualizer",
             "rotating-spiral",
             "random-walkers",
-            "abstract-squares"
+            "abstract-squares",
+            "bouncing-laser"
         ];
 
         for (const id of Main.projects) {
