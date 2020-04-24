@@ -26,8 +26,8 @@ class node {
         // Create a random offset so nodes aren't lined up in a grid
         const halfSize = this.size / 2;
         this.offset = createVector(
-            round(random(0, node.areaSize - halfSize)), 
-            round(random(0, node.areaSize - halfSize)));
+            round(random(halfSize, node.areaSize - halfSize)), 
+            round(random(halfSize, node.areaSize - halfSize)));
     }
 
     draw() {
