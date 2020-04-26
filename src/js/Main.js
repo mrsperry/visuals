@@ -13,7 +13,8 @@ class Main {
             "rotating-spiral",
             "random-walkers",
             "abstract-squares",
-            "bouncing-laser"
+            "bouncing-laser",
+            "gradient-circuit"
         ];
 
         for (const id of Main.projects) {
