@@ -14,7 +14,8 @@ class Main {
             "random-walkers",
             "abstract-squares",
             "bouncing-laser",
-            "gradient-circuit"
+            "gradient-circuit",
+            "meteor-shower"
         ];
 
         for (const id of Main.projects) {
