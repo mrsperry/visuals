@@ -33,9 +33,10 @@ class main {
     }
 
     static draw() {
-        // Clear the screen
+        // Clear the screen with opacity to create a trail behind meteors
         background(0, 0, 0, main.opacity);
         
+        // Add a new meteor every frame
         main.meteors.push(new meteor());
 
         // Remove any meteor that is outside of the screen
