@@ -1,7 +1,7 @@
 class Main {
     static initialize() {
         // List of all visual project names
-        Main.projects = [
+        const projects = [
             "falling-lights",
             "geometric-constellations",
             "rainbow-black-hole",
@@ -18,10 +18,15 @@ class Main {
             "meteor-shower"
         ];
 
-        for (const id of Main.projects) {
+        for (let index = 0; index < projects.length; index++) {
+            const id = projects[index];
+
             // Create the image container
             const link = $("<a>")
                 .attr("href", "projects/" + id)
+                .css("opacity", 0)
+                .delay(index * 100)
+                .animate({ "opacity": 1 })
                 .appendTo(".projects");
 
             const titleString = Main.idToText(id);
@@ -39,18 +44,15 @@ class Main {
                 .appendTo(link);
 
             // Have the title fade in/out on hover
-            link.hover(() => {
-                title.stop().fadeIn(300);
-            }, () => {
-                title.stop().fadeOut(300);
-            });
+            link.on("mouseenter", () => title.stop().fadeIn(300))
+                .on("mouseleave", () => title.stop().fadeOut(300));
         }
     }
 
     static idToText(id) {
         let result = "";
         for (const word of id.split("-")) {
-            // Capitalize the word and add a space
+            // Capitalize each word and add a space
             result += word[0].toUpperCase() + word.substring(1, word.length) + " ";
         }
 
@@ -59,6 +61,4 @@ class Main {
     }
 }
 
-(() => {
-    Main.initialize();
-})();
+(() => Main.initialize())();
