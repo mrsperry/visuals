@@ -35,7 +35,7 @@ class Main {
             // Set the image
             $("<img>")
                 .attr("id", id)
-                .attr("src", "src/images/projects/" + id + ".jpg")
+                .attr("src", "projects/" + id + "/preview.jpg")
                 .attr("alt", titleString)
                 .appendTo(link);
 
