@@ -14,10 +14,9 @@
         <link rel="stylesheet" type="text/css" href="libraries/bootstrap/bootstrap.min.css">
         <script src="libraries/bootstrap/bootstrap.min.js"></script>
         <!-- CSS -->
-        <link rel="stylesheet" type="text/css" href="src/css/index.css">
-        <link rel="stylesheet" type="text/css" href="src/css/media.css">
+        <link rel="stylesheet" type="text/css" href="src/output/output.css">
         <noscript>
-            <link rel="stylesheet" type="text/css" href="src/css/noscript.css">
+            <link rel="stylesheet" type="text/css" href="src/output/noscript.css">
         </noscript>
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130264842-3"></script>
@@ -31,19 +30,27 @@
     </head>
     <body>
         <!-- Navbar -->
-        <nav id="nav" class="flex flex-justify-center">
-            <div id="nav-navbar" class="flex">
-                <a href="../">About Me</a>
-                <a href="../portfolio">Portfolio</a>
-                <a href="../games">Games</a>
-                <a class="nav-active">Visuals</a>
-            </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="../">About Me</a>
+                </li>
+                <li>
+                    <a href="../portfolio">Portfolio</a>
+                </li>
+                <li>
+                    <a href="../games">Games</a>
+                </li>
+                <li>
+                    <a class="active">Visuals</a>
+                </li>
+            </ul>
         </nav>
         <noscript>
-            <p class="centered">You must enable Javascript to view this page and individual visual projects.</p>
-            <p class="centered">If you are concerned about the content of the scripts, you may <a href="https://github.com/mrsperry/visuals/" target="_blank">view the source code on Github</a>.</p>
+            <p>You must enable Javascript to view this page and individual visual projects.</p>
+            <p>If you are concerned about the content of the scripts, you may <a href="https://github.com/mrsperry/visuals/" target="_blank">view the source code on Github</a>.</p>
         </noscript>
-        <main id="content">
+        <main>
             <!-- Carousel -->
             <section id="carousel" class="carousel slide" data-ride="carousel" data-interval="7000">
                 <ol class="carousel-indicators">
@@ -56,7 +63,7 @@
                         <a href="projects/falling-lights">
                             <img class="carousel-image d-block w-100" src="src/assets/images/carousel-1.jpg" alt="Falling Lights">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5>Falling Lights</h5>
+                                <span>Falling Lights</span>
                             </div>
                         </a>
                     </div>
@@ -64,7 +71,7 @@
                         <a href="projects/cubic-audio-visualizer">
                             <img class="carousel-image d-block w-100" src="src/assets/images/carousel-2.jpg" alt="Cubic Audio Visualizer">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5>Cubic Audio Visualizer</h5>
+                                <span>Cubic Audio Visualizer</span>
                             </div>
                         </a>
                     </div>
@@ -72,7 +79,7 @@
                         <a href="projects/falling-text">
                             <img class="carousel-image d-block w-100" src="src/assets/images/carousel-3.jpg" alt="Falling Text">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5>Falling Text</h5>
+                                <span>Falling Text</span>
                             </div>
                         </a>
                     </div>
@@ -87,7 +94,7 @@
                 </a>
             </section>
             <!-- Project list (filled in via JS) -->
-            <section id="project-list" class="flex"></section>
+            <section class="projects"></section>
             <!-- Disclaimer-->
             <footer id="disclaimer">
                 <p>Some project ideas are not my own and I don't claim that they are. I created or remade all of these projects to further my skills and for fun.</p>

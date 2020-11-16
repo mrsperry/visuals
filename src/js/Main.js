@@ -20,15 +20,9 @@ class Main {
 
         for (const id of Main.projects) {
             // Create the image container
-            const container = $("<div>")
-                .addClass("project")
-                .appendTo($("#project-list"));
-
-            // Make sure the entire container can be clicked on
             const link = $("<a>")
-                .addClass("flex flex-justify-center flex-align-center")
                 .attr("href", "projects/" + id)
-                .appendTo(container);
+                .appendTo(".projects");
 
             const titleString = Main.idToText(id);
 
@@ -40,14 +34,12 @@ class Main {
                 .appendTo(link);
 
             // Set the title
-            const title = $("<header>")
-                .addClass("title bold centered")
+            const title = $("<span>")
                 .text(titleString)
-                .hide()
                 .appendTo(link);
 
             // Have the title fade in/out on hover
-            container.hover(() => {
+            link.hover(() => {
                 title.stop().fadeIn(300);
             }, () => {
                 title.stop().fadeOut(300);

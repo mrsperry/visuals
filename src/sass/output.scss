@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+@use "base";
+@use "variables";
+
+@font-face {
+    font-family: "Klein";
+    src: url("../assets/fonts/klein-regular.ttf");
+}
+
+*, ::before, ::after {
+    box-sizing: initial;
+}
+
+:root, body {
+    font-family: "Klein", sans-serif;
+    font-size: 16px;
+    color: variables.$text-color;
+    box-sizing: initial;
+}
+
+/* Containers */
+body {
+    @include base.flex(column);
+    background-color: variables.$bg-color;
+    line-height: initial;
+    margin: 0rem;
+}
+
+nav ul, main {
+    max-width: 1024px;
+}
+
+nav {
+    @include base.flex();
+    width: 100%;
+    margin-bottom: 3rem;
+
+    ul {
+        @include base.flex(row, flex-end);
+        width: 100%;
+        padding: 0rem 1rem;
+        margin: 1.5rem 1rem;
+
+        li {
+            + li {
+                margin-left: 2rem;
+            }
+
+            a {
+                position: relative;
+                transition: color 250ms ease-in-out,
+                            border-bottom 250ms ease-in-out;
+                color: variables.$text-color;
+                font-size: 1.15rem;
+                padding: 0rem 0.5rem;
+                border-bottom: 1px solid transparent;
+            
+                &:hover, &:active, &.active {
+                    color: variables.$text-color;
+
+                    &::after {
+                        width: 100%;
+                        left: 0%;
+                    }
+                }
+            
+                &::after {
+                    position: absolute;
+                    content: "";
+                    transition: width 250ms ease-in-out,
+                                left 250ms ease-in-out;
+                    background-color: variables.$text-color;
+                    width: 0px;
+                    height: 1px;
+                    left: 50%;
+                    bottom: 0px;
+                }
+            }
+        }
+    }
+}
+
+main {
+    @include base.flex(column);
+}
+
+.carousel {
+    box-shadow: 0.5rem 0.5rem 1rem variables.$accent-color;
+    margin-bottom: 2.5rem;
+
+    span {
+        font-weight: bold;
+    }
+}
+
+.projects {
+    @include base.flex();
+    flex-wrap: wrap;
+
+    a {
+        position: relative;
+        box-shadow: 0.5rem 0.5rem 1rem variables.$accent-color;
+        margin: 0.5rem;
+
+        img {
+            width: 325px;
+            overflow: hidden;
+        }
+
+        span {
+            display: none;
+            position: absolute;
+            color: variables.$bg-color;
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
+            bottom: 1rem;
+        }
+    }
+
+    a, a img {
+        border-radius: 1rem;
+    }
+}
+
+footer {
+    padding-top: 3rem;
+    border-top: 1px solid variables.$accent-color;
+    margin: 2.5rem 0rem 3rem;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+}
