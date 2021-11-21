@@ -22,7 +22,7 @@ class main {
         // The main hue to use
         main.hue = random(360);
         // Overall speed multiplier of the drawing
-        main.simulationSpeed = 1;
+        main.simulationSpeed = 2;
     }
 
     static setup() {
