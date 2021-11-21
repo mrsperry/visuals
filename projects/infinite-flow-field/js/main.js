@@ -14,7 +14,7 @@ class main {
         // The vectors that are being drawn as particles
         main.particles = [];
         // The number of particles being drawn
-        main.maxParticles = 1000;
+        main.maxParticles = window.innerWidth > window.innerHeight ? window.innerWidth : window.innerHeight;
         // The max number of particles to add per frame
         main.maxParticlesPerFrame = 2;
         // Perlin noise scale
